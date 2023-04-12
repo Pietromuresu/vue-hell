@@ -14,13 +14,11 @@
 </head>
 <body>
   
-<div id="app">
-  <input v-model="messaggio" type="text" value="" placeholder="Inserisci un messaggio  ">
-  <h1>{{ messaggio }}</h1>
-  
-    <img :src='foto' alt="mountain view">
-  
-</div>
+  <div id="app">
+    <input @keydown.enter="printNewMessage" type="text" v-model="newMessage" placeholder="Dai un titolo a questa foto" >
+    <h1>{{messaggio}}</h1>
+    <img :src="foto" alt="">
+  </div>
 
 
   <script src="assets/scripts.js"></script>
